@@ -6,7 +6,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+
+        html {
+        box-sizing: border-box;
+        background: #1a1a1a;
+        }
+        *,
+        *:before,
+        *:after {
+        box-sizing: inherit;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+        }
+        nav {
+        background: #212121;
+        height: 70px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        }
+        nav #brand {
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        }
+        nav #menu {
+        position: relative;
+        display: flex;
+        height: 100%;
+        }
+        nav #menu li {
+        padding: 0px 30px;
+        cursor: pointer;
+        line-height: 70px;
+        transition: all 0.3s ease-out;
+        }
+        nav #menu li:hover {
+        background: #333;
+        }
+        nav #menu li a {
+        color: #fff;
+        }
+        @media (max-width: 768px) {
+        nav #menu {
+            display: none;
+        }
+        }
+        #hamburger {
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        z-index: 999;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        visibility: hidden;
+        opacity: 0;
+        }
+        #hamburger .line {
+        height: 7px;
+        background: #444;
+        margin: 5px auto;
+        backface-visibility: hidden;
+        }
+        #hamburger.active #one {
+        transform: rotate(45deg) translateX(6px) translateY(6px);
+        }
+        #hamburger.active #two {
+        opacity: 0;
+        }
+        #hamburger.active #three {
+        transform: rotate(-45deg) translateX(10px) translateY(-12px);
+        }
+        @media (max-width: 768px) {
+        #hamburger {
+            visibility: visible;
+            opacity: 1;
+        }
+        }
+        .mobile-menu {
+        z-index: 1;
+        position: absolute;
+        top: 0px;
+        background: #ddd;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        display: table;
+        }
+        .mobile-menu .mobile-menu__items {
+        height: 50px;
+        display: table-cell;
+        vertical-align: middle;
+        }
+        .mobile-menu .mobile-menu__items li {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 35px;
+        min-height: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        }
+        .mobile-menu .mobile-menu__items li:hover {
+        color: #fff;
+        background: #212121;
+        }
+        .mobile-menu .mobile-menu__items li:hover a {
+        transition: all 0.3s ease-out;
+        color: #fff;
+        }
+        .mobile-menu .mobile-menu__items li a {
+        color: #212121;
+        }
+        .mobile-menu.active {
+        visibility: visible;
+        opacity: 0.99;
+        }
+        @media (min-width: 768px) {
+        .mobile-menu {
+            visibility: hidden !important;
+        }
+        }
+
         .parallax {
             /* The image used */
             background-image: url("https://thefoodtech.com/wp-content/uploads/2020/05/abejas_panal_miel.jpg");
@@ -23,32 +157,63 @@
 
         .section{
             background-color: white;
+            height: 100px;
+        }
+
+
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#0C9;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            box-shadow: 2px 2px 3px #999;
+        }
+
+        .my-float{
+            font-size: 2em;
+            margin-top: 14px;
+            color: white;
+        }
+
+        .my-float:hover{
+            text-decoration: none;
+            color: white;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+    <header>
+        <nav>
+          <a href="javascript:;" id="brand">Brand</a>
+          <ul id="menu">
+            <li><a href="javascript:;">HOME</a></li>
+            <li><a href="javascript:;">ABOUT</a></li>
+            <li><a href="javascript:;">CONTACT</a></li>
+            <li><a href="javascript:;">FAQ</a></li>
+          </ul>
+      
+          <div id="hamburger">
+            <div class="line" id="one"></div>
+            <div class="line" id="two"></div>
+            <div class="line" id="three"></div>
+          </div>
+        </nav>
+      
+        <div class="mobile-menu">
+          <ul class="mobile-menu__items">
+            <li><a href="javascript:;">HOME</a></li>
+            <li><a href="javascript:;">ABOUT</a></li>
+            <li><a href="javascript:;">CONTACT</a></li>
+            <li><a href="javascript:;">FAQ</a></li>
           </ul>
         </div>
-    </nav>
+      </header>
 
     <div class="parallax">
 
@@ -57,10 +222,23 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis cupiditate ipsam voluptates deserunt. Laborum sed repudiandae eaque. Illo quia odit cupiditate aperiam rem odio dolore reprehenderit ipsum, quos, commodi sint!
     </div>
 
+    <a href="#" class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    
+    <footer>
+
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script>
+        document.getElementById("hamburger").addEventListener("click", function(){
+        this.classList.toggle("active");
+        document.querySelector(".mobile-menu").classList.toggle("active");
+        });
 
     </script>
 </body>
