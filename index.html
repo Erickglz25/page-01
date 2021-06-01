@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
+        body{
+            background-color: #e6e6e6;
+        }
         html {
         box-sizing: border-box;
-        background: #1a1a1a;
+        background: #1a1acc1a;
         }
    
         nav {
-        background: #263238;;
+        background: #FFF;;
         height: 70px;
         z-index: 1;
         display: flex;
@@ -34,16 +36,19 @@
         height: 100%;
         }
         nav #menu li {
-        padding: 0px 30px;
+            list-style: none;
+        padding: 20px 30px;
         cursor: pointer;
         line-height: 70px;
         transition: all 0.3s ease-out;
+        font-weight: 700;
+        font-size: 21px;
         }
         nav #menu li:hover {
-        background: #333;
+        background: #fff;
         }
         nav #menu li a {
-        color: #fff;
+        color: #000;
         }
         @media (max-width: 768px) {
         nav #menu {
@@ -126,6 +131,53 @@
         visibility: visible;
         opacity: 0.99;
         }
+        .hnosotros{
+            text-align: left;
+            padding: 0 42px 0;
+            margin-bottom: 55px;
+            font-weight: 700;
+        }
+        .hcognitivo{
+            text-align: left;
+            font-weight: 700;
+        }
+        .hcursos{
+            text-align: left;
+            font-weight: 700;
+        }
+        .hcolaboraciones{
+            text-align: left;
+            font-weight: 700;
+        }
+        .shcursos{
+            text-align: left;
+        }
+        .card-title{
+            text-align: left;
+        }
+        .card-text{
+            text-align: justify;
+        }
+        .card{
+            height: 500px;
+        }
+        #cognitivo{
+            background: #fff;
+            margin: 0;
+            padding: 20px 80px;
+        }
+        #colaboraciones{
+            background: #fff;
+            margin: 0;
+            padding: 20px 80px;
+        }
+        #cursos{
+            margin: 20px 80px 40px;
+        }
+        .text-cognitivo{
+            text-align: justify;
+            margin: 20px 20px 40px 20px;
+        }
         @media (min-width: 768px) {
         .mobile-menu {
             visibility: hidden !important;
@@ -172,7 +224,7 @@
         }
 
         section{
-            margin: 80px;
+            margin: 20px 80px;
             text-align: -webkit-center;
         }
 
@@ -215,12 +267,12 @@
 <body>
     <header>
         <nav>
-          <a href="javascript:;" id="brand">Brand</a>
+          <a href="javascript:;" id="brand"><img src="logo1.png" width="150px"></a>
           <ul id="menu">
-            <li><a href="javascript:;">HOME</a></li>
-            <li><a href="javascript:;">ABOUT</a></li>
-            <li><a href="javascript:;">CONTACT</a></li>
-            <li><a href="javascript:;">FAQ</a></li>
+            <li><a href="javascript:;">Inicio</a></li>
+            <li><a href="javascript:;">Nosotros</a></li>
+            <li><a href="javascript:;">Servicios</a></li>
+            <li><a href="javascript:;">Agendar una Cita</a></li>
           </ul>
       
           <div id="hamburger">
@@ -232,10 +284,10 @@
       
         <div class="mobile-menu">
           <ul class="mobile-menu__items">
-            <li><a href="javascript:;">HOME</a></li>
-            <li><a href="javascript:;">ABOUT</a></li>
-            <li><a href="javascript:;">CONTACT</a></li>
-            <li><a href="javascript:;">FAQ</a></li>
+            <li><a href="javascript:;">Inicio</a></li>
+            <li><a href="javascript:;">Nosotros</a></li>
+            <li><a href="javascript:;">Servicios</a></li>
+            <li><a href="javascript:;">Agendar una Cita</a></li>
           </ul>
         </div>
       </header>
@@ -245,13 +297,14 @@
     </div>
     
         <section id="nosotros">
-            <h1>Nosotros</h1>
+            <h2 class="hnosotros">Nosotros:</h2>
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <div class="card" style="width: 18rem;">
                         <img src="https://www.tododisca.com/wp-content/uploads/2020/08/Miel-para-la-tos.jpg.webp" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h4 class="card-title">Misión</h4>
+                          <p class="card-text">Ser agentes de cambio y mejora continua en el ámbito personal, educativo, social y organizacional contribuyendo a la generación y asimilación de pautas saludables y funcionales en los contextos de nuestra actuación.</p>
                         </div>
                       </div>
                 </div>
@@ -259,7 +312,8 @@
                     <div class="card" style="width: 18rem;">
                         <img src="https://www.tododisca.com/wp-content/uploads/2020/08/Miel-para-la-tos.jpg.webp" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h4 class="card-title">Quienes Somos</h4>
+                          <p class="card-text">Somos una empresa mexicana de profesionales con experiencia en Psicología Clínica, Educativa, Social y Organizacional, trabajando la capacitación a nivel público y privado y la facilitación a nivel individual y grupal, así como en procesos complejos y transculturales de calidad y soluciones integrales.</p>
                         </div>
                       </div>
                 </div>
@@ -267,7 +321,8 @@
                     <div class="card" style="width: 18rem;">
                         <img src="https://www.tododisca.com/wp-content/uploads/2020/08/Miel-para-la-tos.jpg.webp" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h4 class="card-title">Visión</h4>
+                          <p class="card-text">Convertirnos en una opción que sea sinónimo de calidad y trabajo significativo que beneficie a los sectores público y privado de manera integral y responsable.</p>
                         </div>
                       </div>
                 </div>
@@ -276,48 +331,48 @@
 
 
         <section id="cognitivo"> 
-            <h1>Psicoterapia Cognitivo</h1>
-            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, minus? Odio reprehenderit porro labore ab voluptatibus fugiat quia fugit quae exercitationem vel. Odio est itaque et assumenda! Aperiam, a quam?</h2>
+            <h2 class="hcognitivo">Psicoterapia Cognitivo</h2>
+            <h4 class="text-cognitivo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, minus? Odio reprehenderit porro labore ab voluptatibus fugiat quia fugit quae exercitationem vel. Odio est itaque et assumenda! Aperiam, a quam?</h4>
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="side-card">
                         <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                        <h5 class="card-title">Card title</h5>
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="side-card">
                         <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                        <h5 class="card-title">Card title</h5>
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="side-card">
                         <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                        <h5 class="card-title">Card title</h5>
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="side-card">
                         <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                        <h5 class="card-title">Card title</h5>
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="side-card">
                         <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                        <h5 class="card-title">Card title</h5>
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="side-card">
                         <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                        <h5 class="card-title">Card title</h5>
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
             </div>
@@ -325,8 +380,8 @@
 
 
         <section id="cursos">
-            <h1>Cursos y Talleres</h1>
-            <h2><small>(Info y Fotos)</small></h2>
+            <h2 class="hcursos">Cursos y Talleres</h2>
+            <h3 class="shcursos"><small>(Info y Fotos)</small></h3>
             
             <div class="row">
                 
@@ -347,55 +402,53 @@
                 </div>
                 
             </div>
+        </section>
 
-            <div class="sub-section" id="colaboraciones">
-                <hr>
-                <h3>Colaboraciones</h3>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="side-card">
-                            <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
+        <section id="colaboraciones">
+            <h2 class="hcolaboraciones">Colaboraciones: </h2>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="side-card">
+                        <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
+                        <h4 class="card-title">Card title</h4>
                     </div>
-    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="side-card">
-                            <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="side-card">
+                        <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
+                        <h4 class="card-title">Card title</h4>
                     </div>
-    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="side-card">
-                            <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="side-card">
+                        <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
+                        <h4 class="card-title">Card title</h4>
                     </div>
-    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="side-card">
-                            <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="side-card">
+                        <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
+                        <h4 class="card-title">Card title</h4>
                     </div>
-    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="side-card">
-                            <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="side-card">
+                        <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
+                        <h4 class="card-title">Card title</h4>
                     </div>
-    
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="side-card">
-                            <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="side-card">
+                        <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
+                        <h4 class="card-title">Card title</h4>
                     </div>
                 </div>
             </div>
-            
         </section>
 
           <!-- Footer -->
