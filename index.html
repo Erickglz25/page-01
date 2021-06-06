@@ -253,9 +253,15 @@
             margin: 20px 20px 40px 20px;
         }
         @media (min-width: 768px) {
-        .mobile-menu {
-            visibility: hidden !important;
-        }
+            .mobile-menu {
+                visibility: hidden !important;
+            }
+
+            .parallax h1{
+                bottom: 0;
+                padding: 20px;
+            }
+
         }
 
         .parallax {
@@ -277,10 +283,18 @@
         }
 
         .parallax h1{
-            position: absolute;
-            bottom: 0;
-            padding: 20px;
-            max-width: 52%;
+            max-width: 100%;
+            font-weight: lighter;
+            padding: 25px;
+        }
+
+        .overlay{
+            width: 100%;
+            display: flex;
+            min-height: 500px;
+            margin: 0;
+            padding: 25px;
+            background-image: linear-gradient(to right top, #423e17bf,#040404a3);
         }
 
         .float{
@@ -363,6 +377,21 @@
         #nosotros{
             margin-bottom: 75px;
         }
+
+        .b{
+            margin: auto;
+        }
+
+        .b a{
+            text-transform: none;
+        }
+
+        .btn-dark {
+            color: #fff;
+            background-color: #273238;
+            border-color: #273238;
+        }
+
     </style>
 </head>
 <body>
@@ -394,7 +423,14 @@
       </header>
 
     <div class="parallax">
-        <h1>La manera más efectiva de hacer algo es hacerlo</h1>
+        <div class="overlay">
+            <div class="b text-center">
+                <h1 class="pb-0">La manera más efectiva de hacer algo es hacerlo</h1>
+                <p><small>¨lorem ipsum quota</small></p>
+                <a type="button" class="btn btn-lg btn-dark mb-3">Agendar una cita</a>
+                <a type="button" class="btn btn-lg btn-outline-warning mb-3">Horarios</a>
+            </div>
+        </div>
     </div>
 
     <div>
@@ -465,6 +501,7 @@
                         <div class="side-card">
                             <img src="https://www.nuiteq.com/hubfs/Acerca-de-nosotros.png" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat.</small></p>
                         </div>
                     </div>
 
@@ -472,6 +509,7 @@
                         <div class="side-card">
                             <img src="https://www.nuiteq.com/hubfs/Acerca-de-nosotros.png" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat.</small></p>
                         </div>
                     </div>
 
@@ -479,6 +517,7 @@
                         <div class="side-card">
                             <img src="https://www.nuiteq.com/hubfs/Acerca-de-nosotros.png" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat.</small></p>
                         </div>
                     </div>
 
@@ -486,6 +525,7 @@
                         <div class="side-card">
                             <img src="https://www.nuiteq.com/hubfs/Acerca-de-nosotros.png" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat.</small></p>
                         </div>
                     </div>
 
@@ -493,6 +533,7 @@
                         <div class="side-card">
                             <img src="https://www.nuiteq.com/hubfs/Acerca-de-nosotros.png" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat.</small></p>
                         </div>
                     </div>
 
@@ -500,6 +541,7 @@
                         <div class="side-card">
                             <img src="https://www.nuiteq.com/hubfs/Acerca-de-nosotros.png" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat.</small></p>
                         </div>
                     </div>
                 </div>
@@ -627,6 +669,7 @@
                         <div class="side-card">
                             <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat. Nulla voluptates eveniet odio cumque placeat aspernatur earum magni fuga.</small></p>
                         </div>
                     </div>
 
@@ -634,6 +677,7 @@
                         <div class="side-card">
                             <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat. Nulla voluptates eveniet odio cumque placeat aspernatur earum magni fuga.</small></p>
                         </div>
                     </div>
 
@@ -641,6 +685,7 @@
                         <div class="side-card">
                             <img src="https://www.paginas-web.site/wp-content/uploads/2018/08/7-tips-que-debes-sabes-para-un-buen-diseno-web.jpg" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat. Nulla voluptates eveniet odio cumque placeat aspernatur earum magni fuga.</small></p>
                         </div>
                     </div>
 
@@ -648,6 +693,7 @@
                         <div class="side-card">
                             <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat. Nulla voluptates eveniet odio cumque placeat aspernatur earum magni fuga.</small></p>
                         </div>
                     </div>
 
@@ -655,6 +701,7 @@
                         <div class="side-card">
                             <img src="https://www.paginas-web.site/wp-content/uploads/2018/08/7-tips-que-debes-sabes-para-un-buen-diseno-web.jpg" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat. Nulla voluptates eveniet odio cumque placeat aspernatur earum magni fuga.</small></p>
                         </div>
                     </div>
 
@@ -662,6 +709,7 @@
                         <div class="side-card">
                             <img src="https://www.treehugger.com/thmb/Yl8AZiySxVWQUcljOIuA2yqdD50=/2121x1414/filters:fill(auto,1)/GettyImages-1144732131-fa2e86368e944e5cbdb5cebca20acbe8.jpg" alt="...">
                             <h4 class="card-title">Card title</h4>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita dolorum laboriosam quaerat. Nulla voluptates eveniet odio cumque placeat aspernatur earum magni fuga.</small></p>
                         </div>
                     </div>
                 </div>
